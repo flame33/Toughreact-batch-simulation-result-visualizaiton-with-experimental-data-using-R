@@ -1,0 +1,94 @@
+  ---> start reading solute.inp
+ '1-D,CO2 injection'                                                               
+
+                 ****** Writing solute transport input ******
+
+
+ Options for controlling chemical calculations:
+ *******************************************
+  Using sequential non-iterative approach
+  Initializing boundary & recharge input solution: Yes
+  Iterative solver - See Tough2 V2 Manual
+  Default 2 Iterations: DH and Chemical Solver
+  Number of gaseous species for transport=  1
+  Print chemical speciation results at each grid block and each time step:  No
+  Monitor porosity and permeability changes but do not affect fluid flow 
+  CO2 and H2O reaction sources are considered in the flow simulation (only for EOS2 or ECO2 module)
+  Not consider aqueous density changes due to  reactions
+
+ Constraints for chemistry solver:
+ *********************************
+  Minimum liquid saturation = 0.1000E-03
+  No Courant number limitation on transport time steps
+  Maximum stoichiometric ionic strength = 0.6000E+01
+
+ Input and output file names:
+ ***************************
+  Thermo. database: ThermXu4.dat        
+  Iteration info:   iter.dat            
+  Plot aqueous:     co2d_conc.dat       
+  Plot minerals:    co2d_min.dat        
+  Plot gas:         co2d_gas.dat        
+  Plot time series: co2d_tim.dat        
+
+ Time/space weighting factors and diffusion coefficients:
+ *******************************************************
+       WTIME      WUPC  DIFUN     DIFUNG 
+        1.00      1.00 0.100E-08 0.110E-04
+
+ Convergence tolerance data:
+ **************************
+  Maximum iterations for solving transport    =    1
+  Relative tolerance for solving transport    = 0.100E-05
+  Maximum iterations for whole chemical system=  500
+  Relative tolerance for whole chemical system= 0.100E-04
+  (absolute mass action tolerance set at min. 1.E-6)
+  Maximum iterations for solving adsorption   =   30
+  Relative tolerance for solving adsorption   = 0.100E-03
+  Rel. con. change tolerance for steady-state = 0.000E+00
+  Rel. con. change tolerance for steady-state = 0.000E+00
+
+ Printout/output control flags:
+ *****************************
+  Writing frequency in time           =   20
+  Number of nodes to output in time file =    1
+  Number of primary species (total amounts) to output in time/plot files =   11
+  Number of minerals to output time/plot files =   19
+  Number of aqueous species to output time/plot files =    0
+  Number of adsorbed species to output time/plot files =    0
+  Number of exchange species to output time/plot files =    0
+  ICONFLAG(0=mol/kg H2O,1=mol/L,2=g/L,mg/L(ppm) )=    1
+  MINFLAG(0=change in mol/m3, 1=change in volume fraction,
+          2=current volume fraction, 3=change in volume%)    1
+
+ Elements for which to output time series:
+     1
+
+ Aqueous components for which to output data: 
+    1    3    4    5    6    7    8    9   10   11   12
+
+ Minerals for which to output data: 
+    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+
+ Individual aqueous species for which to output molalities:
+
+ Surface complexes for which to output molalities:
+
+ Exchanged species for which to output data: 
+
+ Default values for chemical zones:
+ *********************************
+             IZIW IZBW IZMI IZGS IZAD IZEX IZPP IZKD
+             ---- ---- ---- ---- ---- ---- ---- ----
+                1    0    1    0    0    0    1    0
+
+ Data for chemical zones:
+ ***********************
+   ELEM INDX IZIW IZBW IZMI IZGS IZAD IZEX IZPP IZKD
+   ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+      1    1    1    0    1    0    0    0    1    0
+      2    2    1    0    1    0    0    0    1    0
+ 
+ end
+ 
+  ---> finished reading solute.inp 
